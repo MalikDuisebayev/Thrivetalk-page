@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+:root {
+  --SkyBlueColor: #62D0DF;
+  --Transition: all .3s ease-in-out;
+}
+
+.header {
+  background-color: #F4F9E2;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
+}
+.header .menu {
+  padding: 50px 0;
+  width: 233px;
+}
+.header .menu__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .menu__link {
+  padding: 10px;
+  margin: 0 10px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #22356F;
+}
+.header .menu__link:hover {
+  border-bottom: 1px solid black;
+}
+.header .item {
+  list-style: none;
+}
+.header .link {
+  color: black;
+  text-decoration: none;
+}
+.header .logo_link {
+  font-size: 24px;
+  line-height: 27px;
+  letter-spacing: -0.035em;
+  color: var(--SkyBlueColor);
+}
+.header .contacts .link {
+  padding: 20px 30px;
+  background-color: var(--SkyBlueColor);
+  border-radius: 50px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  transition: var(--Transition);
+}
+.header .contacts .link:hover {
+  box-shadow: 0 0 3px grey;
+}
+.header .content {
+  margin: 170px 0 75px;
+  max-width: 500px;
+}
+.header .content .title {
+  padding: 20px 0 50px;
+  font-size: 43px;
+  line-height: 53px;
+  letter-spacing: -0.035em;
+  color: #22356F;
+}
+.header .content .text {
+  font-size: 22px;
+  line-height: 42px;
+  color: #22356F;
+  padding-bottom: 63px;
+}
+.header .content .link {
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.1em;
+  color: #FAB63E;
+  padding: 10px 30px;
+  transition: var(--Transition);
+}
+.header .content .link:hover {
+  background-color: #FAB63E;
+  color: white;
+}
+
+.main {
+  color: white;
+}
+.main .thrive {
+  display: flex;
+  position: relative;
+}
+.main .thrive__left {
+  width: 60%;
+  background-color: var(--SkyBlueColor);
+}
+.main .thrive__container {
+  position: absolute;
+  width: 1120px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.main .thrive__right {
+  width: 40%;
+}
+.main .thrive__right img {
+  display: flex;
+  width: 100%;
+}
+.main .thrive__block {
+  max-width: 550px;
+}
+.main .thrive__block .block__title {
+  padding: 150px 0 75px;
+  font-size: 36px;
+  line-height: 27px;
+  letter-spacing: -0.006em;
+}
+.main .thrive__block .block__text {
+  font-size: 17px;
+  line-height: 35px;
+  font-weight: normal;
+}
+.main .thrive__block .block__text .spanText {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */
