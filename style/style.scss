@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import "mixin/_function";
 
 *{
   margin: 0;
@@ -14,19 +15,8 @@
   max-width: 1120px;
   margin: 0 auto;
 }
-//mixin
-@mixin displayFlex{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-@mixin positionAbsoluteCenter{
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-}
+
+
 :root{
   --SkyBlueColor:  #62D0DF;
   --Transition: all .3s ease-in-out;
@@ -116,18 +106,7 @@
       color: #22356F;
       padding-bottom: 63px;
     }
-    .link{
-      font-size: 16px;
-      line-height: 23px;
-      letter-spacing: 0.1em;
-      color: #FAB63E;
-      padding: 10px 30px;
-      transition: var(--Transition)
-    }
-    .link:hover{
-      background-color: #FAB63E;
-      color: white;
-    }
+    @include buttons;
   }
 
 }
@@ -141,48 +120,27 @@
     position: relative;
     color: white;
     &__left{
-      width: 60%;
       background-color: var(--SkyBlueColor);
-    }
-    &__container{
-      position: absolute;
-      width: 1120px;
-      @include positionAbsoluteCenter;
-    }
-    &__right{
-      width: 40%;
-      img{
-        display: flex;
-        width: 100%;
-      }
     }
     &__block{
       max-width: 550px;
-      .block{
-        &__title{
-          padding: 150px 0 75px;
-          font-size: 36px;
-          line-height: 27px;
-          letter-spacing: -0.006em;
-        }
-        &__text{
-          font-size: 17px;
-          line-height: 35px;
-          font-weight: normal;
-          .spanText{
-            font-size: 21px;
-            font-weight: bold;
-          }
-        }
-      }
     }
+    &__left{
+      width: 60%;
+    }
+    &__right{
+      width: 40%;
+    }
+
+    @include box;
   }
 
 
   //ABOUT
-.about{
+.about {
   padding: 150px 0 0;
-  &__container{
+
+  &__container {
     max-width: 1500px;
     display: flex;
     align-items: center;
@@ -190,8 +148,9 @@
     margin: 0 auto;
     position: relative;
   }
-  .text{
-    &__title{
+
+  .text {
+    &__title {
       position: absolute;
       top: 0;
       left: 106px;
@@ -200,7 +159,8 @@
       letter-spacing: 0.06em;
       color: #22356F;
     }
-    &__paragraph{
+
+    &__paragraph {
       max-width: 600px;
       text-align: left;
       font-size: 24px;
@@ -210,7 +170,8 @@
 
     }
   }
-  &__title{
+
+  &__title {
     font-size: 16px;
     line-height: 19px;
     text-align: center;
@@ -219,42 +180,50 @@
     padding: 75px 0 25px;
   }
 
-  &__card{
+  &__card {
     display: grid;
     grid-template-columns: repeat(auto-fill, 25%);
   }
-  .card{
-    &__item:first-child{
+
+  .card {
+    &__item:first-child {
       background: #FFE2DE;
     }
-    &__item:nth-child(2){
+
+    &__item:nth-child(2) {
       background: #C4E769;
     }
-    &__item:nth-child(3){
+
+    &__item:nth-child(3) {
       background: #62D0DF;
     }
-    &__item:last-child{
+
+    &__item:last-child {
       background: #0052C1;
     }
   }
-  .box{
-    &__information{
+
+  .box {
+    &__information {
       @include displayFlex;
       flex-direction: column;
       padding: 80px 50px 211px;
-      .line{
+
+      .line {
         width: 100%;
         height: 2px;
         background-color: white;
       }
     }
   }
-  .item{
+
+  .item {
     color: #E9B730;
     font-size: 32px;
     margin-top: 23px;
   }
-  .item span{
+
+  .item span {
     font-size: 32px;
     line-height: 34px;
     letter-spacing: -0.006em;
@@ -263,44 +232,121 @@
   }
 
 
-//EXERCISES
+  //EXERCISES
 
-  &__exercises{
+  &__exercises {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
-  .exercises{
+
+  .exercises {
     margin-top: 120px;
-    &__item:first-child{
+
+    &__item:first-child {
       background: #22356F;
     }
-    &__item:nth-child(2){
+
+    &__item:nth-child(2) {
       background: #0052C1;
     }
-    &__item:nth-child(3){
+
+    &__item:nth-child(3) {
       background-image: url("../image/joanna-kosinska-340748.jpg");
       background-size: 100%;
       background-position: center;
       background-repeat: no-repeat;
     }
-    &__item:nth-child(4){
+
+    &__item:nth-child(4) {
       background: #62D0DF;
     }
-    &__item:nth-child(5){
+
+    &__item:nth-child(5) {
       background: #DEE1FF;
     }
-    &__item:last-child{
+
+    &__item:last-child {
       background: #8F00FF;
     }
-    .box{
-      &__information{
+
+    .box {
+      &__information {
         padding: 80px 50px 280px;
       }
-  }
+    }
 
   }
 
+  &__methodology {
+    padding: 22px 0 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .methodology {
+    &__box {
+      padding: 77px 77px 37px 105px;
+    }
+
+    .box {
+      &__title {
+        padding-bottom: 28px;
+        font-size: 28px;
+        line-height: 33px;
+        letter-spacing: -0.03em;
+        color: #22356F;
+      }
+
+      &__text {
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: -0.03em;
+        color: rgba(34, 53, 111, 0.5);
+      }
+    }
+  }
+  //NOTE
+  &__note{
+    display: flex;
+    position: relative;
+  }
+  .note{
+    color: #22356F;
+    &__left{
+      width: 35%;
+    }
+    &__right{
+      width: 65%;
+    }
+    @include box;
+    &__block{
+      max-width: 680px;
+      margin-left: auto;
+      padding-left: 30px;
+    }
+    .block{
+      &__title{
+        padding: 100px 0 225px;
+        font-size: 16px;
+        line-height: 12px;
+        letter-spacing: 0.06em;
+      }
+      &__text{
+        font-size: 30px;
+        line-height: 53px;
+        letter-spacing: -0.01em;
+        font-weight: bold;
+      }
+    }
+  .buttons{
+    padding: 150px 0 50px;
+    @include buttons;
+    .link{
+      color: #FAB63E;
+      text-decoration: none;
+    }
+  }
+  }
 }
-
 }
 

@@ -1,0 +1,62 @@
+@mixin positionAbsoluteCenter{
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+@mixin buttons{
+  .link{
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    color: #FAB63E;
+    padding: 10px 30px;
+    transition: var(--Transition);
+    font-weight:bold;
+  }
+  .link:hover{
+    background-color: #FAB63E;
+    color: white;
+  }
+}
+
+@mixin displayFlex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin box{
+
+  &__container{
+    position: absolute;
+    width: 1120px;
+    @include positionAbsoluteCenter;
+  }
+  &__right{
+    img{
+      display: flex;
+      width: 100%;
+    }
+  }
+  &__block{
+    .block{
+      &__title{
+        padding: 150px 0 75px;
+        font-size: 36px;
+        line-height: 27px;
+        letter-spacing: -0.006em;
+        font-weight: bold;
+      }
+      &__text{
+        font-size: 17px;
+        line-height: 35px;
+        font-weight: normal;
+        .spanText{
+          font-size: 21px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
