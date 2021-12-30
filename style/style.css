@@ -148,7 +148,7 @@
   font-weight: bold;
 }
 .main .about {
-  padding: 150px 0 120px;
+  padding: 150px 0 0;
 }
 .main .about__container {
   max-width: 1500px;
@@ -211,17 +211,48 @@
   height: 2px;
   background-color: white;
 }
-.main .about .box .item {
+.main .about .item {
   color: #E9B730;
   font-size: 32px;
   margin-top: 23px;
 }
-.main .about .box .item span {
+.main .about .item span {
   font-size: 32px;
   line-height: 34px;
   letter-spacing: -0.006em;
   color: #FFFFFF;
   font-weight: bold;
+}
+.main .about__exercises {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.main .about .exercises {
+  margin-top: 120px;
+}
+.main .about .exercises__item:first-child {
+  background: #22356F;
+}
+.main .about .exercises__item:nth-child(2) {
+  background: #0052C1;
+}
+.main .about .exercises__item:nth-child(3) {
+  background-image: url("../image/joanna-kosinska-340748.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.main .about .exercises__item:nth-child(4) {
+  background: #62D0DF;
+}
+.main .about .exercises__item:nth-child(5) {
+  background: #DEE1FF;
+}
+.main .about .exercises__item:last-child {
+  background: #8F00FF;
+}
+.main .about .exercises .box__information {
+  padding: 80px 50px 280px;
 }
 
 /*# sourceMappingURL=style.css.map */
