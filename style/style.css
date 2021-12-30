@@ -6,6 +6,7 @@
 }
 
 .wrapper {
+  max-width: 1440px;
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
 }
@@ -22,6 +23,9 @@
 
 .header {
   background-color: #F4F9E2;
+  background-image: url("../image/linkedin-sales-navigator-406825.png");
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
 }
 .header__container {
   display: flex;
@@ -70,6 +74,7 @@
   color: #FFFFFF;
   text-transform: uppercase;
   transition: var(--Transition);
+  z-index: 50;
 }
 .header .contacts .link:hover {
   box-shadow: 0 0 3px grey;
