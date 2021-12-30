@@ -6,7 +6,6 @@
 }
 
 .wrapper {
-  max-width: 1440px;
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
 }
@@ -105,12 +104,10 @@
   color: white;
 }
 
-.main {
-  color: white;
-}
 .main .thrive {
   display: flex;
   position: relative;
+  color: white;
 }
 .main .thrive__left {
   width: 60%;
@@ -148,6 +145,82 @@
 }
 .main .thrive__block .block__text .spanText {
   font-size: 21px;
+  font-weight: bold;
+}
+.main .about {
+  padding: 150px 0 120px;
+}
+.main .about__container {
+  max-width: 1500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+}
+.main .about .text__title {
+  position: absolute;
+  top: 0;
+  left: 106px;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  color: #22356F;
+}
+.main .about .text__paragraph {
+  max-width: 600px;
+  text-align: left;
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: 0.005em;
+  color: #22356F;
+}
+.main .about__title {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: rgba(34, 53, 111, 0.5);
+  padding: 75px 0 25px;
+}
+.main .about__card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 25%);
+}
+.main .about .card__item:first-child {
+  background: #FFE2DE;
+}
+.main .about .card__item:nth-child(2) {
+  background: #C4E769;
+}
+.main .about .card__item:nth-child(3) {
+  background: #62D0DF;
+}
+.main .about .card__item:last-child {
+  background: #0052C1;
+}
+.main .about .box__information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 50px 211px;
+}
+.main .about .box__information .line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+.main .about .box .item {
+  color: #E9B730;
+  font-size: 32px;
+  margin-top: 23px;
+}
+.main .about .box .item span {
+  font-size: 32px;
+  line-height: 34px;
+  letter-spacing: -0.006em;
+  color: #FFFFFF;
   font-weight: bold;
 }
 
