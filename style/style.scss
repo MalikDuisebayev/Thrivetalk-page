@@ -312,6 +312,10 @@
     color: #22356F;
     &__left{
       width: 35%;
+      img{
+        display: flex;
+        width: 100%;
+      }
     }
     &__right{
       width: 65%;
@@ -346,5 +350,139 @@
   }
   }
 }
+  //CONTACTS
+
+  .section__contacts{
+    display: flex;
+    position: relative;
+    color: white;
+  }
+  .contacts {
+    @include box;
+    &__left{
+      width: 65%;
+      background-color: #22356F;
+    }
+    &__right{
+      width: 35%;
+      img{
+        width: 100%;
+        display: flex;
+      }
+    }
+    &__block{
+      max-width: 680px;
+      padding-left: 30px;
+    }
+    .block{
+      &__heading{
+        font-size: 64px;
+        line-height: 94px;
+        letter-spacing: -0.01em;
+        padding: 150px 0 75px;
+      }
+      &__title{
+        font-size: 16px;
+        line-height: 12px;
+        letter-spacing: 0.06em;
+        padding-top: 100px;
+      }
+      &__text{
+        font-size: 36px;
+        line-height: 53px;
+        letter-spacing: -0.005em;
+      }
+    }
+    .buttons{
+      padding: 80px 0 50px;
+      @include buttons;
+      .link{
+        color: #FAB63E;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
+
+
+// FOOTER //
+.footer {
+
+
+  &__top {
+    display: flex;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+
+
+    &__left {
+      width: 40%;
+    }
+
+    .left {
+      &__img {
+        width: 100%;
+        display: flex;
+      }
+    }
+
+    &__right {
+      width: 60%;
+    }
+
+    .right {
+      &__box {
+        padding: 100px 70px 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+
+      }
+
+      .item {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+
+        &__title {
+          font-size: 20px;
+          line-height: 11px;
+          letter-spacing: -0.006em;
+
+          color: #22356F;
+
+        }
+
+        &__text {
+          padding: 50px 0 0 0;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 23px;
+
+          letter-spacing: -0.006em;
+          color: rgba(34, 53, 111, 0.5);
+        }
+      }
+    }
+
+
+  }
+
+  .bottom {
+    background: #62D0DF;
+    &__copyright{
+      font-size: 16px;
+      letter-spacing: 0.007em;
+      font-weight: 900;
+      line-height: 11px;
+      color: #FFFFFF;
+      padding: 32px 0;
+
+    }
+  }
+}
